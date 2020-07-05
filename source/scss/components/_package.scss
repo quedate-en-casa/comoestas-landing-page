@@ -1,0 +1,101 @@
+/* Pricing package */
+.package{
+    text-align: center;
+
+    &__heading{
+        display:inline-block;
+        width:252px;
+        height:162px;
+        background:url('../../../dist/assets/images/package-head-bg.png') no-repeat center center;
+        background-size: cover;
+        font-size:38px;
+        margin-left:20px;
+        @media #{$media-screen-mobile} {
+            margin-left:0;
+        }
+        
+        .fa{
+            margin-top:72px;
+            margin-left:-10px;
+        }
+
+        &-green{
+            .fa{
+                color:$green-color;
+            }
+        }
+
+        &-primary{
+            .fa{
+                color:$blue-color;
+            }  
+        }
+
+        &-red{
+            .fa{
+                color:$red-color;
+            }  
+        }
+
+        &-yellow{
+            .fa{
+                color:$yellow-color;
+            }  
+        }
+
+        &-purple{
+            .fa{
+                color:$purple-color;
+            }  
+        }
+
+        &-orange{
+            .fa{
+                color:$orange-color;
+            }  
+        }
+    }
+
+    &__content{
+        display:block;
+        margin-bottom:$padding-text;
+        @media #{$media-not-desktop} {
+            margin-bottom:$padding-text/2;
+        }
+
+        ul{
+            display:inline-block;
+            text-align: left;
+            margin:0;
+            padding:0;
+            li{
+                @extend %h5;
+                font-family: $font-montserrat;
+                margin:0 0 $padding-print 0;
+                padding:0;
+                list-style: none;
+                .fa{
+                    margin-right:5px;
+                }
+
+                &.included{
+                    .fa{
+                        color:$green-color;
+                    }
+                }
+
+                &.unincluded{
+                    color:$text-gray-color;
+                    .fa{
+                        color:$red-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &__action{
+        display:block;
+        margin-bottom:$padding-text;
+    }
+}

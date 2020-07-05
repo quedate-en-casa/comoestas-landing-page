@@ -1,0 +1,55 @@
+.demo{
+
+    &__masthead{
+        display: table;
+        position: relative;
+        background-image: url('../../assets/images/demo-masthead-bg.png');
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: cover;
+        text-align: center;
+        color: $white-color;
+        min-height: 95vh;
+        width: 100%;
+        padding-bottom: 80px;
+
+        @media #{$media-screen-tablet} {
+            min-height: 50vh;
+            padding-bottom: 20px;
+        }
+
+        @media #{$media-screen-mobile} {
+            min-height: 85vh;
+            padding-bottom: 40px;
+        }
+
+        &--content{
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    &__title{
+        color: $white-color;
+    }
+
+    &__description{
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: $padding-section;
+
+        @media #{$media-not-desktop} {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: $padding-section/2;
+        }
+    }
+
+
+    &__action{
+        a{
+            margin: 0 10px;
+        }
+    }
+}

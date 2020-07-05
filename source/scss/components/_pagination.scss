@@ -1,0 +1,44 @@
+.pagination{
+    margin: 0;
+
+    li{
+        text-align: center;
+        margin-right: 5px;
+
+        span{
+            padding: 5px $padding-print;
+
+            &.disebled,
+            &.disebled:hover,
+            &.disebled:focus,
+            &.disebled:active{
+                cursor: default;
+                background: $silver-color;
+                color: $text-gray-color;
+            }
+        }
+
+        a{
+            padding: 5px $padding-half;
+            display: block;
+            background: $gray-color;
+
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active{
+                text-decoration: none;
+                background: $blue-color;
+                color: $white-color;
+            }
+
+            &.disebled,
+            &.disebled:hover,
+            &.disebled:focus,
+            &.disebled:active{
+                display: none;
+            }
+        }
+    }
+}

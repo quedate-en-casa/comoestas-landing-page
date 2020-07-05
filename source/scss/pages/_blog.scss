@@ -1,0 +1,307 @@
+.blog{
+    &__listing{
+        position: relative;
+        display: block;
+        border-bottom: 1px solid $gray-color;
+        padding-bottom: $padding-elements;
+        margin-bottom: $padding-elements;
+
+        @media #{$media-not-desktop} {
+            padding-bottom: $padding-elements/2;
+            margin-bottom: $padding-elements/2;
+        }
+
+        &-grid{
+            .article__card{
+                margin-bottom: $padding-column;
+            }
+        }
+
+        &-thumbnail{
+            display: block;
+            margin-bottom: $padding-text;
+
+            @media #{$media-not-desktop} {
+                margin-bottom: $padding-text/2;
+            }
+        }
+
+        &-title{
+            margin-bottom: $padding-text;
+
+            @media #{$media-not-desktop} {
+                margin-bottom: $padding-text/2;
+            }
+
+            a{
+                color: $black-color;
+            }
+        }
+
+        &-meta{
+            display: block;
+            margin: 0 0 $padding-text 0;
+            padding: 0;
+
+            @media #{$media-not-desktop} {
+                margin: 0 0 $padding-text/2 0;
+            }
+
+            li{
+                list-style: none;
+                display: inline;
+                margin: 0 $padding-text 0 0;
+                padding: 0;
+
+                @media #{$media-not-desktop} {
+                    margin: 0 $padding-text/2 0 0;
+                }
+
+                label{
+                    font-family: $font-montserrat-bold;
+                    margin: 0 5px 0 0;
+
+                    i{
+                        margin-right: 5px;
+                    }    
+                }
+            }
+        }
+
+        &-content{
+            display: block;
+            margin-bottom: $padding-column;
+
+            @media #{$media-not-desktop} {
+                margin-bottom: $padding-column/2;
+            }
+
+            &--text{
+                display: block;
+                margin-bottom: $padding-text;
+
+                @media #{$media-not-desktop} {
+                    margin-bottom: $padding-text/2;
+                }
+            }
+    
+            &--tags{
+                display: block;
+                margin: 0;
+                padding: 0;
+
+                li{
+                    list-style: none;
+                    display: inline;
+                    margin: 0 $padding-print/2 0 0;
+                    padding: 0;
+    
+                    @media #{$media-not-desktop} {
+                        margin: 0 $padding-print/8 0 0;
+                    }
+
+                    a{
+                        border-radius: 20px;
+                        background: $gray-color;
+                        color: $black-color;
+                        padding: 3px $padding-half;
+    
+                        @media #{$media-not-desktop} {
+                            padding: 2px $padding-half/2;
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &:active{
+                            text-decoration: none;
+                            background: $blue-color;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__asside-image{
+
+        &--thumbnail{
+            margin-bottom: $padding-text;
+
+            @media #{$media-not-desktop} {
+                margin-bottom: $padding-text/2;
+            }
+        }
+
+    }
+
+    &__single-post{
+        
+        .blog__listing-content{
+            margin-bottom: 0;
+        }
+
+        .blog__listing-content--tags{
+            margin-bottom: 0;
+        }
+    }
+
+    &__author{
+        position: relative;
+        background: $gray-bg;
+        padding: $padding-column $padding-column $padding-print $padding-column + 100;
+        margin-bottom: $padding-elements;
+
+        @media #{$media-not-desktop} {
+            padding: $padding-column/2 $padding-column/2 $padding-print/2 $padding-column + 50;
+            padding-bottom: $padding-elements/2;
+            margin-bottom: $padding-elements/2;
+        }
+
+        &--avatar{
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+            border-radius: 50%;
+            top: $padding-column;
+            left: $padding-column;
+
+            @media #{$media-not-desktop} {
+                width: 50px;
+                height: 50px;
+                top: $padding-column/2;
+                left: $padding-column/2;
+            }
+        }
+
+        &--content{
+
+            &-title a{
+                color: $black-color;
+
+                &:hover{
+                    color: $blue-color;
+                }
+            }
+        }
+
+        &--network{
+            display: block;
+            position: relative;
+            margin-bottom: $padding-text;
+
+            @media #{$media-not-desktop} {
+                margin-bottom: $padding-text/2;
+            }
+
+            a{
+                display: inline-block;
+                width: 28px;
+                height: 28px;
+                background: $bg-autor-network;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 28px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__related-read{
+        position: relative;
+        display: block;
+        border-bottom: 1px solid $gray-color;
+        padding-bottom: $padding-text;
+        margin-bottom: $padding-elements;
+
+        @media #{$media-not-desktop} {
+            padding-bottom: $padding-text/2;
+            margin-bottom: $padding-elements/2;
+        }
+
+        .article__card{
+            margin-bottom: $padding-text; 
+
+            @media #{$media-not-desktop} {
+               margin-bottom: $padding-text/2; 
+            }
+        }
+    }
+
+    &__comments{
+
+        &--media{
+            position: relative;
+            border: 1px solid $gray-color;
+            padding: $padding-column $padding-column $padding-print $padding-column + 70;
+            margin-bottom: $padding-elements;
+    
+            @media #{$media-not-desktop} {
+                padding: $padding-column/2 $padding-column/2 $padding-print/2 $padding-column + 40;
+                padding-bottom: $padding-elements/2;
+                margin-bottom: $padding-elements/2;
+            }
+
+            .blog__comments--media{
+                margin-bottom: $padding-text;
+    
+                @media #{$media-not-desktop} {
+                    padding-bottom: $padding-text/2;
+                    margin-top: 5px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &--avatar{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            border-radius: 50%;
+            top: $padding-column;
+            left: $padding-column;
+
+            @media #{$media-not-desktop} {
+                width: 40px;
+                height: 40px;
+                top: $padding-column/2;
+                left: $padding-column/2;
+            }
+        }
+
+        &--content{
+            margin-bottom: $padding-text;
+    
+            @media #{$media-not-desktop} {
+                margin-bottom: $padding-text/2;
+            }
+
+            &-title {
+                position: relative;
+
+                a{
+                    color: $black-color;
+
+                    &:hover{
+                        color: $blue-color;
+                    }    
+                }
+
+                &--label{
+                    position: absolute;
+                    top: 3px;
+                    right: 0;
+                    font-size: 14px;
+                    line-height: 14px;
+                    font-weight: 400;
+                    font-family: $font-montserrat;
+                    background: $gray-color;
+                    padding: 4px $padding-half;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}

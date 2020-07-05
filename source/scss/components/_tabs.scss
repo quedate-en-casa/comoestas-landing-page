@@ -1,0 +1,108 @@
+/* Tabs */
+.tabs{
+  &__navigation {
+      float: left;
+      width: 100%;
+      position: relative;
+      background: $white-color;
+      box-shadow: 0px 6px 40px 3px rgba(0,0,0,0.06);
+      margin-bottom: $padding-section;
+
+      @media #{$media-not-desktop} {
+        margin-bottom: $padding-section/2;
+      }
+
+      &-item{
+          float: left;
+
+            @media #{$media-not-desktop} {
+                width: 100% !important;
+            }
+
+          &--link{
+              @extend %h5;
+              font-family: $font-montserrat;
+              display: block;
+              text-align: center;
+              color: $text-color;
+              text-decoration: none;
+              border-bottom: 3px solid transparent;
+              margin-bottom: 0;
+              padding: $padding-component $padding-text;
+
+              @media #{$media-not-desktop} {
+                padding: $padding-component/2 $padding-text/2;
+              }
+
+              &:hover{
+                  color: $text-color;
+                  text-decoration: none;
+
+                  .tabs__navigation-item--icon{
+                      color: $green-color;
+                  }
+              }
+
+              &:focus{
+                color: $blue-color;
+                text-decoration: none;
+              }
+
+              &.active{
+                color: $text-color;
+                border-bottom: 3px solid $green-color;
+
+                @media #{$media-not-desktop} {
+                    background: none;
+                    color: $text-color;
+                    border-bottom: 3px solid transparent;
+                }
+
+                .tabs__navigation-item--icon{
+                    color: $green-color;
+
+                    @media #{$media-not-desktop} {
+                        color: $blue-color;
+                    }
+                }
+              }
+          }
+
+          &--icon{
+            @extend %h2;
+            font-family: $font-awesome;
+            margin-bottom: $padding-print;
+            display: block;
+            color: $blue-color;
+
+            @media #{$media-not-desktop} {
+                margin-bottom: 0;
+            }
+
+          }
+      }
+
+      .owl-nav{
+        .owl-prev{
+            left:$padding-text;
+
+            &.disabled{
+                display: none;
+            }
+        }
+        .owl-next{
+            left:auto;
+            right:$padding-text;
+
+            &.disabled{
+                display: none;
+            }
+        }
+      }
+  }
+
+  &__content{
+      float: left;
+      width: 100%;
+  }
+}

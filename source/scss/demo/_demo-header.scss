@@ -1,0 +1,25 @@
+.demo{
+
+    &__header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        color: $white-color;
+        padding: 15px 0;
+        background: rgba(98,74,218,1);
+        background: -moz-linear-gradient(left, rgba(98,74,218,1) 0%, rgba(101,75,229,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(98,74,218,1)), color-stop(100%, rgba(101,75,229,1)));
+        background: -webkit-linear-gradient(left, rgba(98,74,218,1) 0%, rgba(101,75,229,1) 100%);
+        background: -o-linear-gradient(left, rgba(98,74,218,1) 0%, rgba(101,75,229,1) 100%);
+        background: -ms-linear-gradient(left, rgba(98,74,218,1) 0%, rgba(101,75,229,1) 100%);
+        background: linear-gradient(to right, rgba(98,74,218,1) 0%, rgba(101,75,229,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#624ada', endColorstr='#654be5', GradientType=1 );
+        z-index: 5;
+
+        &--action{
+            float: right;
+        }
+    }
+}

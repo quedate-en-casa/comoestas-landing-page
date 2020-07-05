@@ -1,0 +1,131 @@
+/* Testimoni */
+.testimoni{
+    display:block;
+    position: relative;
+
+    &__card{
+        position: relative;
+        border: 1px solid $gray-color;
+        background: $silver-color;
+        padding: $padding-elements $padding-text;
+        padding-bottom: 98px;
+        margin-bottom: $padding-column;
+
+        @media #{$media-not-desktop} {
+            padding: $padding-elements/2 $padding-text/2;
+            margin-bottom: $padding-column/2;
+        }
+
+        .blockquote{
+            margin-bottom: $padding-elements;
+
+            @media #{$media-not-desktop} {
+                margin-bottom: $padding-elements/2;
+            }
+        }
+
+        &--author{
+            position: absolute;
+            width: 100%;
+            border-top: 1px solid $gray-color;
+            padding: $padding-text $padding-text $padding-text 94px;
+            left: 0;
+            bottom: 0;
+
+            @media #{$media-not-desktop} {
+                position: relative;
+                padding: $padding-text/2 $padding-text/2 0 70px;
+            }
+
+            &-avatar{
+                position: absolute;
+                width: 54px;
+                height: 54px;
+                overflow: hidden;
+                border-radius: 50%;
+                top: $padding-text;
+                left: $padding-text;
+
+                @media #{$media-not-desktop} {
+                    width:48px;
+                    height:48px;
+                    top: $padding-text/2;
+                    left: $padding-text/2;
+                }
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &-name{
+                margin-bottom: 5px;
+
+                @media #{$media-not-desktop} {
+                    margin-bottom: 2px;
+                }
+            }
+        }
+    }
+
+    blockquote{
+        position: relative;
+        @extend %h3;
+        font-family: $font-montserrat;
+        font-style: italic;
+        padding:0 $padding-column;
+        margin-bottom:$padding-elements;
+        @media #{$media-not-desktop} {
+            margin-bottom:$padding-elements/2;
+            padding:0 $padding-column/2;
+        }
+
+        &::before,
+        &::after{
+            @extend %h2;
+            position: absolute;
+            content: "\f10d";
+            font-family:$font-awesome;
+            color:$blue-color;
+            top:0;
+            left:0;
+        }
+
+        &::after{
+            content: "\f10e";
+            color:$green-color;
+            top:75%;
+            left:auto;
+            right:10px;
+        }
+    }
+
+    &__author{
+        @extend %h4;
+        font-family: $font-montserrat;
+    }
+
+    &__avatar{
+        display:inline-block;
+        width:86px;
+        height: 86px;
+        border-radius:50%;
+        overflow: hidden;
+        border:8px solid $gray-bg;
+        @media #{$media-not-desktop} {
+            width:53px;
+            height: 53px;
+            border:4px solid $gray-bg
+        }
+
+        &:hover{
+            border-color:$blue-color;
+        }
+
+        &-image{
+            width: 100%;
+            height:auto;
+        }
+    }
+}

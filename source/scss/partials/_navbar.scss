@@ -1,0 +1,235 @@
+/* Header */
+.header{
+    position:fixed;
+    width:100%;
+    transition: all 0.3s ease-in-out !important;
+    z-index: $zindex-sticky;
+    @media #{$media-not-desktop} {
+        padding:$padding-elements/2 0;
+    }
+
+    .wrap-core-nav-list{
+        position: initial;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            position: static;
+        }
+    }
+
+    &:hover{
+        background:$white-color;
+        box-shadow: 0px 3px 59px 0px rgba(0,0,0,0.15);
+        @media #{$media-not-desktop} {
+            background:none;
+            box-shadow: none;
+        }
+
+        .menu li a,
+        .attributes li{
+            padding:$padding-elements/2 + 5 0 !important;
+        }
+
+        .attributes li{
+            @media #{$media-not-desktop} {
+                padding:0 !important;
+            }
+        }
+
+        .nav-header .brand{
+            margin-top:$padding-text !important;
+            @media #{$media-not-desktop} {
+                margin-top:0 !important;
+            }
+        }
+    }
+
+    &__white{
+        background:$white-color;
+        box-shadow: 0px 3px 59px 0px rgba(0,0,0,0.15);
+    }
+
+
+    &__inner{
+        background:$white-color;
+        box-shadow: none;
+
+        &:hover{
+            background:$white-color;
+            box-shadow: none;
+        }
+
+        &.header__sticky{
+            &:hover{
+                box-shadow: 0px 3px 59px 0px rgba(0,0,0,0.15);
+            }
+        }
+        .menu li a,
+        .attributes li{
+            padding:$padding-elements/2 + 5 0 !important;
+            @media #{$media-not-desktop} {
+                padding:0 !important;
+            }
+        }
+
+        .nav-header .brand{
+            margin-top:$padding-text !important;
+            @media #{$media-not-desktop} {
+                margin-top:0 !important;
+            }
+        }
+    }
+
+    &__sticky{
+        background:$white-color;
+        box-shadow: 0px 3px 59px 0px rgba(0,0,0,0.15);
+        &:hover{
+            @media #{$media-not-desktop} {
+                background:$white-color;
+                padding:$padding-elements/2 0;
+                box-shadow: 0px 3px 59px 0px rgba(0,0,0,0.15);
+            }
+        }
+
+        .menu li a,
+        .attributes li{
+            padding:$padding-elements/2 + 5 0 !important;
+            @media #{$media-not-desktop} {
+                padding:0 !important;
+            }
+        }
+
+        .nav-header .brand{
+            margin-top:$padding-text !important;
+            @media #{$media-not-desktop} {
+                margin-top:0 !important;
+            }
+        }
+    }
+
+    .menu{
+        li{
+            padding:0 15px;
+            a{
+                display:inline-block;
+                color:$text-color;
+                font-size:$font-body;
+                line-height: $lineheight-auto;
+                font-family: $font-montserrat-bold;
+                padding:$padding-elements 0;
+                text-decoration: none;
+
+                &:hover{
+                    color:$blue-color;
+                }
+            }
+            &.active{
+                a{
+                    color:$blue-color;
+                }
+            }
+            &.megamenu,
+            &.dropdown{
+                a::after{
+                    content: "\f0d7";
+                    font-family: $font-awesome;
+                    font-size:11px;
+                    margin-left:5px;
+                    padding-top:4px;
+                }
+            }
+        }
+    }
+
+    .toggle-bar{
+        &.core-nav-toggle{
+            float:right;
+            font-size:24px;
+        }
+    }
+
+    .attributes{
+        margin-left:$padding-print;
+        @media #{$media-not-desktop} {
+            margin-right: 0 !important;
+        }
+        li{
+            transition: all 0.3s ease-in-out !important;
+            padding:$padding-elements 0;
+            @media #{$media-not-desktop} {
+                padding: 0 !important;
+            }
+            a{
+                &.btn-header{
+                    @extend .btn-xs;
+                    @extend .btn-primary;
+                    margin-top:-6px;
+                }
+            }
+            &.header__button{
+                @media #{$media-not-desktop} {
+                    display: none;
+                }
+            }
+            &.header__download-icon{
+                display: none;
+                padding:0;
+                a{
+                    padding:0;
+                    font-size:22px;
+                    line-height: auto;
+                    color:$blue-color;
+                    margin-top:3px;
+                }
+                @media #{$media-not-desktop} {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .nav-header{
+        .brand{
+            display: inline-block;
+            margin-top:$padding-column + 3;
+            @media #{$media-not-desktop} {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__mobile{
+        position: fixed;
+        width: 100%;
+        display:none;
+        background: #fff;
+        padding:$padding-text 0;
+        margin-bottom:$padding-print;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        text-align: center;
+        top:0;
+        z-index: 2;
+
+        &-brand{
+            display:inline-block;
+            width: 100px;
+            height: 25px;
+            background:url('../../../dist/assets/brand/logo@2x.png') no-repeat 0 0;
+            background-size: 100px 25px;
+            text-indent:-99999px;
+        }
+
+        &-toggle{
+            position:absolute;
+            top:$padding-text+3;
+            font-size:18px !important;
+            right:15px;
+            color:$gray-color;
+
+            &:hover{
+                color:$blue-color;
+            }
+        }
+        @media #{$media-not-desktop} {
+            display:block;
+        }
+    }
+}

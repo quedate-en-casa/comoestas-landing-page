@@ -1,0 +1,111 @@
+// color
+$black-color:#000;
+$white-color:#fff;
+$blue-color:#1e5ee5;
+$blue-dark-color:#0f44b2;
+$orange-color:#f26822;
+$orange-dark-color:#c74e11;
+$yellow-color:#f9d750;
+$yellow-dark-color:#d0af2d;
+$green-color:#4aa47b;
+$green-dark-color:#2c7855;
+$red-color:#e24c43;
+$red-dark-color:#ab2921;
+$purple-color:#403595;
+$purple-light-color: #695faf;
+$purple-dark-color:#271e6f;
+$silver-color: #f1f5fd;
+$gray-color:#d7deee;
+$text-color:#2c2d2d;
+$text-gray-color:#b7c3de;
+$social-network-icon:#7483a3;
+
+// Background
+$nav-mobile-bg:#0f1826;
+$dropdown-hover-bg:#f8faff;
+$white-bg: #fff;
+$gray-bg:#edf3ff;
+$silver-bg: #f4f7fc;
+$social-network-bg:#eaeef4;
+$bg-autor-network: #c4d0e8;
+$form-bg: #fafbfc;
+
+// Border
+$form-border: #bac6e1;
+
+// font families
+$font-montserrat-light: 'Montserrat Light', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+$font-montserrat-medium: 'Montserrat Medium', sans-serif;
+$font-montserrat-bold: 'Montserrat Bold', sans-serif;
+$font-montserrat-semi-bold: 'Montserrat SemiBold', sans-serif;
+
+// font icon
+$font-awesome : 'FontAwesome';
+
+// font size
+$font-h1:36px;
+$font-h2:28px;
+$font-h3:24px;
+$font-h4:18px;
+$font-h5:16px;
+$font-h6:14px;
+$font-body:14px;
+$font-print:12px;
+
+
+// line height
+$lineheight-auto:normal;
+$lineheight-body:24px;
+$lineheight-print:22px;
+$lineheight-h1:48px;
+$lineheight-h2:42px;
+$lineheight-h3:36px;
+$lineheight-h4:28px;
+$lineheight-h5:24px;
+$lineheight-h6:22px;
+
+// Spacing
+$padding-masthead:180px;
+$padding-cta:100px;
+$padding-footer:100px;
+$padding-section:80px;
+$padding-component:60px;
+$padding-elements:40px;
+$padding-column:30px;
+$padding-text:20px;
+$padding-half:15px;
+$padding-print:10px;
+
+// Spacing offset
+$padding-offset-bottom-masthead:-140px;
+
+// z-index
+$zindex-dropdown:          1000 !default;
+$zindex-sticky:            1020 !default;
+$zindex-fixed:             1030 !default;
+$zindex-modal-backdrop:    1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-navbar-mobile:     1080 !default;
+
+// break points
+$break-point-320: 320px;
+$break-point-360: 360px;
+$break-point-576: 576px;
+$break-point-768: 768px;
+$break-point-992: 992px;
+$break-point-1200: 1200px;
+$break-point-1400: 1400px;
+
+// media screens
+$media-small-mobile: '(max-width: #{$break-point-360 - 1})';
+$media-screen-mobile: '(max-width: #{$break-point-768 - 1})';
+$media-screen-mobile-landscape: '(max-width: #{$break-point-768 - 1}) and (orientation: landscape)';
+$media-screen-tablet: '(min-width: #{$break-point-768}) and (max-width: #{$break-point-992 - 1})';
+$media-not-desktop: '(max-width: #{$break-point-992 - 1})';
+$media-desktop: '(min-width: #{$break-point-992})';
+$media-small-desktop: '(min-width: #{$break-point-992}) and (max-width: #{$break-point-1200 - 1})';
+$media-medium-desktop: '(min-width: #{$break-point-1200}) and (max-width: #{$break-point-1400 - 1})';
+$media-large-desktop: '(min-width: #{$break-point-1400})';

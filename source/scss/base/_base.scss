@@ -1,0 +1,110 @@
+/* Base */
+html, body{
+    @extend %body-copy;
+    color: $text-color;
+    margin-bottom:0;
+    overflow-x: hidden !important;
+}
+
+.body-copy {
+    @extend %body-copy;
+}
+  
+.fine-print {
+    @extend %fine-print;
+}
+
+.core-nav .nav-container,
+.container{
+    @media #{$media-large-desktop} {
+        max-width:1200px;
+    }
+    @media #{$media-medium-desktop} {
+        max-width:1140px;
+    }
+    @media #{$media-screen-tablet} {
+        width:720px;
+        padding-left:15px;
+        padding-right:15px;
+    }
+    @media #{$media-screen-mobile} {
+        width:100%;
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    &__fullwidth{
+        width:100% !important;
+        @media #{$media-large-desktop} {
+            padding-left: $padding-section;
+            padding-right: $padding-section;
+        }
+        @media #{$media-medium-desktop} {
+            padding-left: $padding-section/2;
+            padding-right: $padding-section/2;
+        }
+        @media #{$media-not-desktop} {
+            padding-left:15px;
+            padding-right:15px;
+        }
+    }
+}
+
+.core-nav .nav-container{
+    @media #{$media-large-desktop} {
+        padding-left:0;
+        padding-right:0;
+    } 
+}
+
+.divider{
+    position: relative;
+    display:block;
+    height:1px;
+    background:$gray-color;
+    margin:$padding-component 0;
+    @media #{$media-screen-mobile} {
+        margin:$padding-component/2 0;
+    }
+}
+
+@-webkit-keyframes flyIn {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(1rem);
+        transform: translateY(1rem);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes flyIn {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(1rem);
+        transform: translateY(1rem);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.flyIn {
+    animation-name: flyIn;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+    animation-delay: .1s;
+}

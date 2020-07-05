@@ -1,0 +1,15 @@
+.innerpage__head{
+    background: $gray-bg;
+    color: $white-color;
+    padding: $padding-section 0 $padding-print 0;
+    margin-bottom: $padding-elements;
+    border-radius: 0;
+    display: block;
+    -ms-flex-wrap: inherit;
+    flex-wrap: inherit;
+
+    @media #{$media-not-desktop} {
+        padding: $padding-section - 8 0 $padding-print/2 0;
+        margin-bottom: $padding-elements/2;
+    }
+}

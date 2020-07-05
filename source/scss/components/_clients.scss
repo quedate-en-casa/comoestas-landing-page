@@ -1,0 +1,33 @@
+/* Clients */
+.client{
+    position: relative;
+    display: block;
+    text-align: center;
+
+    img{
+        width:145px !important;
+        height:auto;
+        margin:0 auto;
+    }
+
+    &_logo{
+        transition: all 0.3s ease-in-out !important;
+
+        &-hover{
+            position: absolute;
+            transition: all 0.3s ease-in-out !important;
+            opacity: 0;
+            left:50%;
+            margin-left:-72.5px !important;
+        }
+    }
+
+    &:hover{
+        .client_logo{
+            opacity: 0;
+        }
+        .client_logo-hover{
+            opacity: 1;
+        }
+    }
+}

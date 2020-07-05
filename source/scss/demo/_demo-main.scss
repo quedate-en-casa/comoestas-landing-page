@@ -1,0 +1,141 @@
+
+.demo{
+    &__section{
+        padding: $padding-section 0;
+
+        @media #{$media-not-desktop} {
+            padding: $padding-section/2 0;
+        }
+    }
+
+    &__column{
+        padding-top: $padding-elements;
+
+        @media #{$media-not-desktop} {
+            padding-top: $padding-elements/2;
+        }
+    }
+    &__card{
+        text-align: center;
+        -webkit-box-shadow: 0px 14px 20px 2px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 14px 20px 2px rgba(0,0,0,0.1);
+        box-shadow: 0px 14px 20px 2px rgba(0,0,0,0.1);
+        transition: all .3s ease-in-out;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &:hover{
+            margin-top: -20px;
+        }
+
+        &--thumbnail{
+            display: block;
+            width: 100%;
+
+            .img-fluid{
+                width: 100%;
+            }
+        }
+
+        &--content{
+            padding: $padding-column $padding-column $padding-component $padding-column;
+
+            @media #{$media-not-desktop} {
+                padding: $padding-column/2 $padding-column/2 $padding-component/2 $padding-column/2;
+            }
+        }
+
+        &--title{
+
+            a{
+                color: $black-color;
+            }
+        }
+
+        &--button{
+            display: inline-block;
+            border: 1px solid #f0f0f0;
+            color: $black-color;
+            padding: 10px 30px;
+            border-radius: 40px;
+            -webkit-box-shadow: 0px 14px 20px 2px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0px 14px 20px 2px rgba(0,0,0,0.1);
+            box-shadow: 0px 14px 20px 2px rgba(0,0,0,0.1);
+
+            &:hover,
+            &:active,
+            &:focus{
+                color: $black-color;
+                text-decoration: none;
+                font-family: $font-montserrat-bold;
+            }
+        }
+
+        &--blank{
+            display: table;
+            width: 100%;
+            text-align: center;
+            -webkit-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.1);
+            box-shadow: 0px 14px  0px2px rgba(0,0,0,0.1);
+            transition: all .3s ease-in-out;
+            border-radius: 10px;
+            overflow: hidden;
+
+            @media #{$media-not-desktop} {
+                border-radius: 60px;
+                height: 60px;
+                margin-top: 20px;
+            }
+
+            &:hover{
+                margin-top: -20px;
+            }
+
+            &-link{
+                display: table-cell;
+                vertical-align: middle;
+                font-family: $font-montserrat-bold;
+                color: $black-color;
+                font-size: 18px;
+                line-height: 24px;
+
+                &:hover,
+                &:active,
+                &:focus{
+                    color: $black-color;
+                }
+            }
+        }
+    }
+
+    &__footer{
+        color: $white-color;
+        padding: 15px 0;
+        background: rgba(98,74,218,1);
+        background: -moz-linear-gradient(left, rgba(98,74,218,1) 0%, rgba(101,75,229,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(98,74,218,1)), color-stop(100%, rgba(101,75,229,1)));
+        background: -webkit-linear-gradient(left, rgba(98,74,218,1) 0%, rgba(101,75,229,1) 100%);
+        background: -o-linear-gradient(left, rgba(98,74,218,1) 0%, rgba(101,75,229,1) 100%);
+        background: -ms-linear-gradient(left, rgba(98,74,218,1) 0%, rgba(101,75,229,1) 100%);
+        background: linear-gradient(to right, rgba(98,74,218,1) 0%, rgba(101,75,229,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#624ada', endColorstr='#654be5', GradientType=1 );
+        z-index: 5;
+        text-align: center;
+
+        a{
+            color: $white-color;
+            text-decoration: underline;
+
+            &:hover,
+            &:active,
+            &:focus{
+                color: $white-color;
+            }
+        }
+
+        p{
+            margin: 0;
+        }
+    }
+}

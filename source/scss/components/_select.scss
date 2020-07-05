@@ -1,0 +1,54 @@
+
+.select2-container{
+    width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single{
+    font-size: $font-print;
+    line-height: $lineheight-print;
+    background:$form-bg;
+    border:1px solid $form-border;
+    padding:$padding-text $padding-half;
+    box-shadow: inset 1px 1px 5px 0px rgba(0,0,0,0.05);
+    color: $text-color;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    padding:0;
+    font-size: $font-print;
+    line-height: $lineheight-print;
+    margin-top: -10px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder{
+    color: #6c757d;
+}
+
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple, .select2-container--default.select2-container--open.select2-container--above .select2-selection--single{
+    &:focus{
+        outline: 0;
+    }
+}
+
+.select2-dropdown{
+    border:1px solid $form-border;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true]{
+    background-color: $gray-color;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: $blue-color;
+}
+
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    top: 8px;
+    right: 10px;
+}

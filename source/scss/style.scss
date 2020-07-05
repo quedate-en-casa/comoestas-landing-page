@@ -1,0 +1,100 @@
+/*===================================================
+Template Name  : Smooth software company landing page
+Version        : 1.0.0
+Last Update    : 11 January  2020
+Author         : 99webpage
+====================================================*/
+
+/* 
+CSS import - import css file
+======================================================== */
+@import '../../assets/css/plugins/bootstrap.min.css';
+@import '../../assets/css/plugins/coreNavigation-1.1.3.css';
+@import '../../assets/css/plugins/owl.carousel.css';
+@import '../../assets/css/plugins/plyr.css';
+
+/* 
+CSS import - import fonts  
+======================================================== */
+@import 'base/fonts';
+
+/*
+BASE - base styles,  variables, typhography, etc
+======================================================== */
+@import 'base/variables';
+@import 'base/font-awesome';
+@import 'base/icons';
+@import 'base/typography';
+@import 'base/base';
+@import 'base/demo';
+
+/*
+PLUGINS - Scss For javascript plugin
+======================================================== */
+@import 'plugins/modal-video';
+@import 'plugins/select2';
+@import 'plugins/magnific_popup/main';
+@import 'plugins/mfp-zoom';
+
+/*
+PARTIALS - Header,  Masthead, Footer, etc
+======================================================== */
+@import 'partials/navbar';
+@import 'partials/dropdown';
+@import 'partials/navbar-responsive';
+@import 'partials/megamenu';
+@import 'partials/masthead';
+@import 'partials/innerhead';
+@import 'partials/section';
+@import 'partials/footer';
+@import 'partials/aside';
+@import 'partials/call-to-action';
+@import 'partials/back-to-top';
+@import 'partials/accordion';
+
+/*
+COMPONENTS - button,  form, slider, etc 
+======================================================== */
+@import 'components/form';
+@import 'components/select';
+@import 'components/button';
+@import 'components/column';
+@import 'components/pricing';
+@import 'components/package';
+@import 'components/modal';
+@import 'components/tabs';
+@import 'components/blockquote';
+@import 'components/testimoni';
+@import 'components/article';
+@import 'components/owl.carousel';
+@import 'components/clients';
+@import 'components/video';
+@import 'components/features';
+@import 'components/innerpage';
+@import 'components/breadcrumb';
+@import 'components/pagination';
+@import 'components/advertisement';
+@import 'components/hero';
+@import 'components/team';
+@import 'components/notices';
+
+/*
+Pages - blog,  about, contact, etc 
+======================================================== */
+@import 'pages/blog';
+@import 'pages/contact';
+@import 'pages/career';
+@import 'pages/gallery';
+
+
+/*
+Demo - demo style
+======================================================== */
+@import 'demo/demo-masthead';
+@import 'demo/demo-header';
+@import 'demo/demo-main';
+
+/*
+HELPER - helper style
+======================================================== */
+@import 'base/helper';
