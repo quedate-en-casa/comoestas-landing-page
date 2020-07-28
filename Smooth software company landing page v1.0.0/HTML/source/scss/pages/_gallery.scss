@@ -1,0 +1,174 @@
+.gallery{
+    &__filter{
+        position: relative;
+        display: block;
+        margin-bottom: $padding-column;
+
+        @media #{$media-not-desktop} {
+            margin-bottom: $padding-column/2;
+        }
+
+        &--list{
+            display: block;
+            margin: 0;
+            padding: 0;
+
+            li{
+                display: inline-block;
+                list-style: none;
+
+                &.active{
+                    .gallery__filter--list-link{
+                        background: $purple-color;
+                        color: $white-color;
+                    }
+                }
+            }
+
+            &-link{
+                background: $gray-color;
+                border: none;
+                display: inline-block;
+                color: $black-color;
+                padding: $padding-print/2 $padding-half;
+                margin-right: $padding-print;
+                margin-bottom: $padding-print;
+                transition: all 0.3s ease-in-out;
+
+                &:hover,
+                &:active,
+                &:focus{
+                    background: $purple-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    &__item{
+        position: relative;
+        margin-bottom: $padding-elements;
+
+        @media #{$media-not-desktop} {
+            margin-bottom: $padding-elements/2;
+        }
+
+        &--image{
+            position: relative;
+            display: block;
+            padding-top: 70%;
+            overflow: hidden;
+            margin-bottom: $padding-text;
+
+            @media #{$media-not-desktop} {
+                margin-bottom: $padding-text/2;
+            }
+
+            &--background{
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                margin-bottom: $padding-text;
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 0;
+                left: 0;
+                transition: all 0.5s ease-in-out;
+                z-index: 2;
+
+                @media #{$media-not-desktop} {
+                    margin-bottom: $padding-text/2;
+                }
+            }
+
+            &--overlay{
+                position: absolute;
+                display: table;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                color: $white-color;
+                text-align: center;
+                top: 0;
+                left: 0;
+                font-size: 24px;
+                line-height: normal;
+                opacity: 0;
+                transition: all 0.5s ease-in-out;
+                z-index: 4;
+
+                &.show{
+                    opacity: 1;
+                }
+
+                i{
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+            }
+
+            &:hover{
+                .gallery__item--image--background{
+                    transform: scale(1.08);
+                }
+            }
+        }
+        &--desc{
+            position: relative;
+
+            &--title{
+                margin-bottom: $padding-text;
+
+                @media #{$media-not-desktop} {
+                    margin-bottom: $padding-text/2;
+                }
+                
+                a{
+                    color: $black-color;
+                }
+            }
+
+            &--author{
+                position: relative;
+                padding-left: 50px;
+                padding-right: 100px;
+
+                p{
+                    margin-bottom: 5px;
+                    line-height: 14px;
+                }
+
+                a{
+                    color: $black-color
+                }
+
+                span{
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+                &-avatar{
+                    position: absolute;
+                    width: 37px;
+                    height: 37px;
+                    left: 0;
+                    top: 2px;
+                }
+            }
+        }
+
+        &--action{
+            position: absolute;
+            font-size: 20px;
+            line-height: normal;
+            right: 0;
+            bottom: 13px;
+
+            &--link{
+                color: $text-gray-color;
+                margin-left: 10px;
+            }
+        }
+    }
+}

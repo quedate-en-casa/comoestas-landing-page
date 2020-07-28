@@ -1,0 +1,28 @@
+.breadcrumb{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+
+    .breadcrumb-item{
+
+        +.breadcrumb-item{
+            &::before{
+                color: $black-color;
+            }
+        }
+
+        a{
+            color: $black-color;
+        }
+
+        i{
+            margin-right: 5px;
+        }
+
+        &.active{
+            color: $black-color;
+            opacity: 0.6;
+        }
+    }
+}

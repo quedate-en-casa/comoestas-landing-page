@@ -1,0 +1,180 @@
+/* Form */
+.form{
+    display: block;
+    margin-bottom:$padding-elements;
+    @media #{$media-not-desktop} {
+        margin-bottom:$padding-elements/2;
+    }
+
+    input, textarea, select, button{
+        &:focus{
+            outline: 0;
+        }
+    }
+
+    &-control{
+        @extend %fine-print;
+        background:$form-bg;
+        border:1px solid $form-border;
+        padding:$padding-text $padding-half;
+        box-shadow: inset 1px 1px 5px 0px rgba(0,0,0,0.05);
+
+        &:focus{
+            outline: 0;
+            box-shadow: none;
+            border: 1px solid $blue-color;
+        }
+    }
+
+    &__subscribe{
+        position:relative;
+        display: block;
+        &-rounded{
+            border-radius:80px;
+        }
+    
+        &-shadow{
+            box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        &-input{
+            background:$white-color;
+            width:100%;
+            border:2px solid;
+            padding:$padding-text $padding-text;
+            line-height: $lineheight-auto;
+            @media #{$media-not-desktop} {
+                line-height: $lineheight-body;
+                padding:$padding-half/2 $padding-text/2;
+            }
+
+            &-blue{
+                border-color:$blue-color;
+            }
+
+            &-green{
+                border-color:$green-color;
+            }
+
+            &-yellow{
+                border-color:$yellow-color;
+            }
+
+            &-purple{
+                border-color:$purple-color;
+            }
+
+            &-red{
+                border-color:$red-color;
+            }
+
+            &-orange{
+                border-color:$orange-color;
+            }
+        }
+
+        &-button{
+            @extend %h4;
+            line-height: 18px;
+            position: absolute;
+            top:0;
+            right:0;
+            border-radius:0 80px 80px 0;
+            padding:$padding-text $padding-text $padding-text $padding-text;
+            border:2px solid;
+            transition: all 0.3s ease-in-out;
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                padding:$padding-text $padding-text $padding-text - 2 $padding-text;
+            }
+
+            @media #{$media-not-desktop} {
+                line-height: $lineheight-body;
+                padding:$padding-half/2 $padding-text/2 $padding-half/2 $padding-text/2;
+            }
+
+            &:hover{
+                &::after{
+                    right: -5px;
+                }
+            }
+
+            &:after{
+                position: relative;
+                content: "\f178";
+                font-family: $font-awesome;
+                display: inline-block;
+                margin-left:10px;
+                top:1px;
+                right: 0;
+                transition: all 0.3s ease-in-out;
+
+                @media #{$media-not-desktop} {
+                    right: 5px;
+                }
+            }
+
+            &-blue{
+                background:$blue-color;
+                border-color:$blue-color;
+                color:#fff;
+            }
+
+            &-green{
+                background:$green-color;
+                border-color:$green-color;
+                color:#fff;
+            }
+
+
+            &-yellow{
+                background:$yellow-color;
+                border-color:$yellow-color;
+                color:#fff;
+            }
+
+            &-purple{
+                background:$purple-color;
+                border-color:$purple-color;
+                color:#fff;
+            }
+
+            &-red{
+                background:$red-color;
+                border-color:$red-color;
+                color:#fff;
+            }
+
+            &-orange{
+                background:$orange-color;
+                border-color:$orange-color;
+                color:#fff;
+            }
+        }
+    }
+}
+
+.form-group{
+    display: block;
+    margin-bottom: $padding-text;
+
+    @media #{$media-not-desktop} {
+        margin-bottom: $padding-text/2;
+    }
+
+    label{
+        font-family: $font-montserrat-bold;
+    }
+}
+
+.form-action{
+    display: block;
+    margin-bottom: $padding-text;
+    margin-top: $padding-print;
+
+    @media #{$media-not-desktop} {
+        margin-top: $padding-print/2;
+        margin-bottom: $padding-text/2;
+    }
+
+}

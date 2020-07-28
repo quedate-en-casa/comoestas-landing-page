@@ -1,0 +1,34 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "description": "started guulp package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "99webpage",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-bundle-assets": "^2.29.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^1.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0"
+  },
+  "dependencies": {
+    "coffee-gulp": "0.0.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-mode": "^1.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.12.1",
+    "imagemin": "^5.3.1"
+  }
+}

@@ -1,0 +1,262 @@
+/* Masthead */
+.masthead{
+    position: relative;
+    background:$gray-bg;
+    padding:$padding-masthead 0 $padding-section 0;
+    @media #{$media-not-desktop} {
+        padding:$padding-section 0 $padding-section/2 0;
+    }
+
+    &__white{
+        background:$white-bg;
+    }
+
+    &__fullscreen{
+        width: 100%;
+        height: 100vh;
+    }
+
+    &__content{
+        display: block;
+        margin-bottom:$padding-elements;
+        @media #{$media-not-desktop} {
+            margin-bottom:$padding-elements/2;
+        }
+
+        &-mtop{
+            margin-top: $padding-section;
+            @media #{$media-not-desktop} {
+                margin-top: 0;
+            }
+        }
+
+        &-subtitle{
+            @extend %h4;
+            font-family: $font-montserrat;
+        }
+
+        &-image{
+            max-width:100% !important;
+            height:auto;
+            margin-bottom:-3px;
+        }
+
+        &-action{
+            display: block;
+            margin-top:$padding-elements;
+
+            .btn{
+                margin-right: $padding-print;
+                margin-bottom: $padding-print;
+                @media #{$media-not-desktop} {
+                    margin-right: $padding-print/2;
+                    margin-bottom: $padding-print/2;
+                }
+            }
+
+            @media #{$media-not-desktop} {
+                margin-top:$padding-elements/2;
+            }
+        }
+    }
+
+    &__offset-bottom{
+        margin-bottom:$padding-offset-bottom-masthead;
+        @media #{$media-not-desktop} {
+            margin-bottom:0;
+        }
+    }
+
+    &__style-watter{
+        position: relative;
+        background-image: url('../../assets/images/masthead-watter-bg.png');
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: 100% auto;
+        padding-bottom:280px;
+
+        @media all and (-webkit-min-device-pixel-ratio: 1.5) {
+            background-image: url('../../assets/images/masthead-watter-bg@2x.png');
+        }
+
+        @media #{$media-not-desktop} {
+            padding-bottom:140px;
+            text-align: center;
+        }
+
+        @media #{$media-screen-mobile} {
+            padding-bottom:100px;
+        }
+
+        &--image{
+            position: relative;
+            display: block;
+            text-align: center;
+            padding-top:$padding-masthead;
+            @media #{$media-not-desktop} {
+                padding-top:$padding-masthead/2;
+            }
+        }
+
+        &--icon{
+            position: absolute;
+            display: block;
+            width:100%;
+            height:auto;
+            z-index: 9;
+            top:0;
+            animation-duration: 4.5s;
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    &__style-overlay{
+        position: absolute;
+        background-image: url('../../assets/images/masthead-overlay.png');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 100% auto;
+        display: block;
+        content: '';
+        width: 520px;
+        height: 596px;
+        top:0;
+        right:0;
+
+        @media all and (-webkit-min-device-pixel-ratio: 1.5) {
+            background-image: url('../../assets/images/masthead-overlay@2x.png');
+        }
+
+        @media #{$media-small-desktop} {
+            width: 260px;
+            height: 298px;
+        }
+
+        @media #{$media-not-desktop} {
+            display: none;
+        }
+    }
+
+    &__form{
+        position: relative;
+        display: block;
+        background:$white-color;
+        margin-bottom:$padding-text;
+        padding:$padding-text $padding-text $padding-elements $padding-text;
+        border: 1px solid $form-border;
+        border-radius: 4px;
+        box-shadow: 0px 3px 30px 0px rgba(0,0,0,0.1);
+
+        &-action{
+            position: relative;
+            display: block;
+            text-align: center;
+            margin-top:$padding-text;
+            margin-bottom:-$padding-component;
+
+            .btn{
+                display:inline-block;
+            }
+        }
+    }
+
+    &__browser{
+        display: block;
+        position: relative;
+        background-image: url('../../assets/images/icons-bg.png');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 100% auto;
+        overflow: hidden;
+
+        @media all and (-webkit-min-device-pixel-ratio: 1.5) {
+            background-image: url('../../assets/images/icons-bg@2x.png');
+        }
+
+        @media #{$media-not-desktop} {
+            background-position: bottom left;
+        }
+
+        &-wrapper{
+            padding:$padding-column $padding-elements 0 $padding-elements;
+            @media #{$media-not-desktop} {
+                padding:$padding-column/2 0 0 0;
+            }
+            .owl-carousel{
+                box-shadow: 0px 3px 59px 0px rgba(0,0,0,0.15);
+
+                &:before{
+                    position: absolute;
+                    content: '';
+                    width:100%;
+                    height: $padding-column;
+                    background: $gray-color;
+                    border-radius: 4px 4px 0 0;
+                    top:-$padding-column;
+                    left:0;
+                }
+
+                &:after{
+                    position: absolute;
+                    content: '';
+                    width: 60px;
+                    height: 10px;
+                    background-image: url('../../assets/images/screenshot/browser-clos.png');
+                    background-repeat: no-repeat;
+                    background-position: top left;
+                    background-size: auto 100%;
+                    top:-20px;
+                    left: $padding-half;
+                    z-index:2;
+
+                    @media all and (-webkit-min-device-pixel-ratio: 1.5) {
+                        background-image: url('../../assets/images/screenshot/browser-close@2x.png');
+                    }
+                }
+            }
+        }
+    }
+
+    &__video{
+        position: relative;
+        display: block;
+        box-shadow: 0px 16px 74px 6px rgba(0,0,0,0.1);
+        margin-bottom:-$padding-section;
+        
+        @media #{$media-not-desktop} {
+            margin-bottom:-$padding-section/2;
+        }
+    }
+
+    &__gradient{
+        padding:0;
+        background: rgba(90,37,194,1);
+        background: -moz-linear-gradient(top, rgba(90,37,194,1) 0%, rgba(95,99,214,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(90,37,194,1)), color-stop(100%, rgba(95,99,214,1)));
+        background: -webkit-linear-gradient(top, rgba(90,37,194,1) 0%, rgba(95,99,214,1) 100%);
+        background: -o-linear-gradient(top, rgba(90,37,194,1) 0%, rgba(95,99,214,1) 100%);
+        background: -ms-linear-gradient(top, rgba(90,37,194,1) 0%, rgba(95,99,214,1) 100%);
+        background: linear-gradient(to bottom, rgba(90,37,194,1) 0%, rgba(95,99,214,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a25c2', endColorstr='#5f63d6', GradientType=0 );
+
+        &-content{
+            background-image: url('../../assets/images/gradient-image-bg.png');
+            background-repeat: repeat;
+            background-position: top left;
+            padding:$padding-masthead 0 $padding-section 0;
+
+            @media #{$media-not-desktop} {
+                padding:$padding-section 0 $padding-section/2 0;
+            }
+
+            @media all and (-webkit-min-device-pixel-ratio: 1.5) {
+                background-image: url('../../assets/images/gradient-image-bg@2x.png');
+            }
+        }
+
+        .masthead__content,
+        .masthead__content-title{
+            color: $white-color;
+        }
+    }
+}

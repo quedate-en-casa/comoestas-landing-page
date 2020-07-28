@@ -1,0 +1,167 @@
+/* Navbar responsive */
+.dropdown-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: #fff;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.core-responsive-slide.open {
+    @media #{$media-not-desktop} {
+        margin-left: 100%;
+        margin-right: -100%;
+    }
+}
+
+.core-responsive-slide .core-nav .wrap-core-nav-list{
+    @media #{$media-not-desktop} {
+        padding-top: 65px;
+        background: #fff;
+        z-index: $zindex-navbar-mobile;
+        width:100%;
+        border:none;
+        z-index:$zindex-tooltip;
+        margin-left:-100%;
+    }
+}
+
+.header:hover,
+.header__sticky,
+.header__inner,
+.header{
+    .core-nav{
+        .wrap-core-nav-list.right{
+            .menu{
+                @media #{$media-not-desktop} {
+                    padding:0 $padding-column/2 !important;
+                }
+                li{
+                    @media #{$media-not-desktop} {
+                        float: left;
+                        border-bottom:1px solid $gray-color;
+                        padding:$padding-text/2 0 !important;
+                    }
+                    &:last-child{
+                        @media #{$media-not-desktop} {
+                            border-bottom:none;
+                            margin-bottom:$padding-print/2;
+                        }
+                    }
+                    a{
+                        @media #{$media-not-desktop} {
+                            font-size: 13px;
+                            padding:0 !important;
+                        }
+                    }
+
+                    &.dropdown{
+                        &::after{
+                            @media #{$media-not-desktop} {
+                                display: none;
+                            }
+                        }
+                        .dropdown-menu{
+                            @media #{$media-not-desktop} {
+                                position: relative;
+                                border:none;
+                                display: block !important;
+                                margin: $padding-text/2 0 0 0 !important;
+                                padding:0 !important;
+                                // border-top:1px solid $gray-color;
+                            }
+                            li{
+                                @media #{$media-not-desktop} {
+                                    border:none;
+                                    padding:0 !important;
+                                    margin-bottom: $padding-print/2;
+                                }
+                                &:last-child{
+                                    @media #{$media-not-desktop} {
+                                        border-bottom:none;
+                                        margin-bottom:0;
+                                    }
+                                }
+                                a{
+                                    @media #{$media-not-desktop} {
+                                        padding:0 !important;
+                                        font-size:13px !important;
+                                        border:none;
+                                    }
+                                }
+
+                                &.dropdown{
+                                    @media #{$media-not-desktop} {
+                                        margin-top: $padding-print/2 !important;
+                                        padding-top: $padding-text/2 !important;
+                                        border-top:1px solid $gray-color;
+                                    }
+                                    a{
+                                        @media #{$media-not-desktop} {
+                                            font-family: $font-montserrat-bold;
+                                        }
+                                    }
+                                    .dropdown-menu{
+                                        li{
+                                            a{
+                                                @media #{$media-not-desktop} {
+                                                    font-family: $font-montserrat;
+                                                }
+                                            }
+
+                                            &.dropdown{
+                                                a{
+                                                    @media #{$media-not-desktop} {
+                                                        font-family: $font-montserrat-bold;
+                                                    }
+                                                }
+                                                .dropdown-menu{
+                                                    li{
+                                                        a{
+                                                            @media #{$media-not-desktop} {
+                                                                font-family: $font-montserrat;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.dropdown,
+                    &.megamenu{
+                        a{
+                            &::after{
+                                @media #{$media-not-desktop} {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu{
+        .megamenu__widget{
+            @media #{$media-not-desktop} {
+                float:left;
+                width:100%;
+                margin-top:$padding-text/2 !important;
+            } 
+        }
+        .megamenu__widget-lis{
+            @media #{$media-not-desktop} {
+                margin-top:5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

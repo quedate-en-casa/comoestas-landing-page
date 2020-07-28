@@ -1,0 +1,44 @@
+
+.blockquote{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: $padding-text + 5;
+
+    @media #{$media-not-desktop} {
+        margin-bottom: $padding-text/2;
+    }
+
+    blockquote{
+    text-align: center;
+    position: relative;
+    @extend %h3;
+    font-family: $font-montserrat;
+    font-style: italic;
+    padding:0 $padding-column;
+
+    @media #{$media-not-desktop} {
+        padding:0 $padding-column/2;
+    }
+
+    &::before,
+    &::after{
+        @extend %h2;
+        position: absolute;
+        content: "\f10d";
+        font-family:$font-awesome;
+        color:$blue-color;
+        top: -10px;
+        left:0;
+    }
+
+    &::after{
+        content: "\f10e";
+        color:$green-color;
+        top:auto;
+        left:auto;
+        right:10px;
+        bottom: -30px;
+    }
+}
+}

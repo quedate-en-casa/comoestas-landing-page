@@ -1,0 +1,228 @@
+/* Typography */
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+  }
+  
+  %h1 {
+    font-family: $font-montserrat-bold;
+    font-size: $font-h1;
+    line-height: $lineheight-h1;
+    color:$text-color;
+    margin-top:0;
+    margin-bottom:$padding-text;
+  
+    @media #{$media-screen-tablet} {
+      font-size: $font-h2;
+      line-height: $lineheight-h2;
+      margin-bottom:$padding-text/2;
+    }
+  
+    @media #{$media-screen-mobile} {
+      font-size: $font-h3;
+      line-height: $lineheight-h3;
+      margin-bottom:$padding-text/2;
+    }
+  }
+  
+  %h2 {
+    font-family: $font-montserrat-bold;
+    font-size: $font-h2;
+    line-height: $lineheight-h2;
+    margin-top:0;
+    margin-bottom:$padding-text;
+  
+    @media #{$media-screen-tablet} {
+      font-size: $font-h3;
+      line-height: $lineheight-h3;
+      margin-bottom:$padding-text/2;
+    }
+  
+    @media #{$media-screen-mobile} {
+      font-size: $font-h4;
+      line-height: $lineheight-h4;
+      margin-bottom:$padding-text/2;
+    }
+  }
+  
+  %h3 {
+    font-family: $font-montserrat-bold;
+    font-size: $font-h3;
+    line-height: $lineheight-h3;
+    margin-top:0;
+    margin-bottom:$padding-text;
+  
+    @media #{$media-screen-tablet} {
+      font-size: $font-h4;
+      line-height: $lineheight-h4;
+      margin-bottom:$padding-text/2;
+    }
+  
+    @media #{$media-screen-mobile} {
+      font-size: $font-h5;
+      line-height: $lineheight-h5;
+      margin-bottom:$padding-text/2;
+    }
+  }
+  
+  %h4 {
+    font-family: $font-montserrat-bold;
+    font-size: $font-h4;
+    line-height: $lineheight-h4;
+    margin-top:0;
+    margin-bottom:$padding-text;
+  
+    @media #{$media-screen-tablet} {
+      font-size: $font-h5;
+      line-height: $lineheight-h5;
+      margin-bottom:$padding-text/2;
+    }
+  
+    @media #{$media-screen-mobile} {
+      font-size: $font-h6;
+      line-height: $lineheight-h6;
+      margin-bottom:$padding-text/2;
+    }
+  }
+  
+  %h5 {
+    font-family: $font-montserrat-bold;
+    font-size: $font-h5;
+    line-height: $lineheight-h5;
+    margin-top:0;
+    margin-bottom:$padding-text;
+  
+    @media #{$media-screen-tablet} {
+      font-size: $font-h6;
+      line-height: $lineheight-h6;
+      margin-bottom:$padding-text/2;
+    }
+  
+    @media #{$media-screen-mobile} {
+      font-size: $font-body;
+      line-height: $lineheight-body;
+      margin-bottom:$padding-text/2;
+    }
+  }
+  
+  %h6 {
+    font-family: $font-montserrat-bold;
+    font-size: $font-h6;
+    line-height: $lineheight-auto;
+    margin-top:0;
+    margin-bottom:$padding-text;
+  
+    @media #{$media-screen-tablet} {
+      font-size: $font-body;
+      line-height: $lineheight-body;
+      margin-bottom:$padding-text/2;
+    }
+  
+    @media #{$media-screen-mobile} {
+      font-size: $font-print;
+      line-height: $lineheight-print;
+      margin-bottom:$padding-text/2;
+    }
+  }
+  
+  %body-copy {
+    font-family: $font-montserrat;
+    font-size: $font-body;
+    line-height: $lineheight-body;
+    color:$text-color;
+    margin-top:0;
+    margin-bottom:$padding-text;
+  
+    @media #{$media-not-desktop} {
+      font-size: $font-print;
+      line-height: $lineheight-print;
+      margin-bottom:$padding-text/2;
+    }
+  }
+  
+%fine-print {
+    font-family: $font-montserrat;
+    font-size: $font-print;
+    line-height: $lineheight-print;
+    color:$text-color;
+    margin:0;
+  
+    @media #{$media-not-desktop} {
+      font-size: $font-print;
+      line-height: $lineheight-print;
+    }
+}
+
+.headline{
+  position: relative;
+  font-family: $font-montserrat;
+  font-size: $font-h3;
+  line-height: $lineheight-h3;
+  padding-left: $padding-elements; 
+  padding-top: 5px; 
+  margin-bottom: $padding-text;
+  
+  @media #{$media-screen-tablet} {
+    font-size: $font-h4;
+    line-height: $lineheight-h4;
+    margin-bottom:$padding-text/2;
+  }
+
+  @media #{$media-screen-mobile} {
+    font-size: $font-h5;
+    line-height: $lineheight-h5;
+    margin-bottom:$padding-text/2;
+  }
+
+  &::before{
+      @extend %h2;
+      position: absolute;
+      content: "\f10d";
+      font-family:$font-awesome;
+      color:$blue-color;
+      top:-5px;
+      left:0;
+  }
+}
+
+a{
+    transition: all 0.3s ease-in-out !important;
+    color:$blue-color;
+
+    &:hover, &:active, &:focus{
+      text-decoration: underline;
+      color:$blue-dark-color;
+    }
+
+    &.unnderline{
+      text-decoration: underline;
+    }
+}
+
+p{
+    margin-bottom:$padding-text;
+    @media #{$media-not-desktop} {
+        margin-bottom:$padding-text/2;
+    }
+}
+
+strong{
+    font-family: $font-montserrat-bold !important;
+}
+
+h1 { @extend %h1; }
+
+h2 { @extend %h2; }
+
+h3 { @extend %h3; }
+
+h4 { @extend %h4; }
+
+h5 { @extend %h5; }
+
+h6 { @extend %h6; }
+
+.text-normal{ font-family: $font-montserrat;}

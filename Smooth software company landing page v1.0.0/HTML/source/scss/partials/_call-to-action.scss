@@ -1,0 +1,80 @@
+/* Section */
+.section{
+    &__cta{
+        background:$purple-color url('../../assets/images/cta-bg.png') no-repeat center center;
+        padding:$padding-cta 0;
+        color: $white-color;
+        text-align: center;
+        @media #{$media-not-desktop} {
+            padding:$padding-cta/2 0;
+        }
+
+        &-column{
+            position: relative;
+            border-radius: 20px;
+            z-index: $zindex-dropdown;
+            padding:$padding-elements 0 $padding-elements 0;
+            box-shadow: 0px 30px 59px 0px rgba(0,0,0,0.15);
+
+            @media #{$media-not-desktop} {
+                border-radius: 10px;
+                padding:$padding-elements/2 0 $padding-elements/2 0;
+                box-shadow: 0px 15x 30px 0px rgba(0,0,0,0.15);
+            }
+        }
+
+        &-subscribe{
+            position: relative;
+            display: block;
+            margin-top: $padding-elements;
+
+            @media #{$media-not-desktop} {
+                margin-top: 0;
+            }
+
+            &-input{
+                @extend %h5;
+                font-family: $font-montserrat;
+                width :100%;
+                background: none;
+                padding: $padding-text 0;
+                border:none;
+                color: $text-gray-color;
+                border-bottom:1px solid $purple-light-color;
+
+                @media #{$media-not-desktop} {
+                    padding: 0 0 $padding-text/2 0;
+                }
+
+                &:focus{
+                    outline: 0;
+                    border-color: $white-color;
+                }
+
+                &::placeholder{
+                    color: $text-gray-color
+                }
+            }
+
+            &-button{
+                position: absolute;
+                right:0;
+                top: 0;
+
+                @media #{$media-not-desktop} {
+                    position: relative;
+                    display:block;
+                    width: 100%;
+                }
+            }
+        }
+
+        &-offset{
+            margin-bottom: -$padding-cta;
+
+            @media #{$media-not-desktop} {
+                margin-bottom: -$padding-cta/2;
+            }
+        }
+    }
+}

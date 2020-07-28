@@ -1,0 +1,63 @@
+.accordion{
+    &__group{
+        margin-bottom: $padding-column;
+
+        @media #{$media-not-desktop} {
+            margin-bottom: $padding-column/2;
+        }
+    }
+    &__link{
+        position: relative;
+        border: none;
+        display: block;
+        width: 100%;
+        background: $silver-color;
+        padding: $padding-text $padding-component $padding-text $padding-column;
+        text-align: left;
+        color: $black-color;
+        font-size: $font-h4;
+        cursor: pointer;
+
+        @media #{$media-not-desktop} {
+            padding: $padding-text/2 35px $padding-text/2 $padding-column/2;
+        }
+
+        &:focus{
+            outline: 0;
+        }
+
+        &:after{
+            position: absolute;
+            content: "\f068";
+            font-family: 'FontAwesome';
+            top: 50%;
+            right: $padding-column;
+            margin-top: -11px;
+
+            @media #{$media-not-desktop} {
+                font-size: 14px;
+                right: $padding-column/2;
+            }
+        }
+
+        &.collapsed{
+            &:after{
+                content: "\f067";
+            }
+        }
+    }
+
+    &__collapse{
+        background: $silver-color;
+
+        margin-top: 2px;
+
+        .card-body{
+            padding: $padding-column;
+
+            @media #{$media-not-desktop} {
+                padding: $padding-column/2;
+            }
+        }
+    }
+}

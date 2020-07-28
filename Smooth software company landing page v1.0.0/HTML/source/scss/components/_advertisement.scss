@@ -1,0 +1,12 @@
+.advertisement{
+    display: block;
+    text-align: center;
+
+    &__label{
+        color: $text-gray-color;
+        text-transform: uppercase;
+        display:block;
+        text-align: center;
+        margin-bottom: $padding-print;
+    }
+}

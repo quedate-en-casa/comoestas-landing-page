@@ -1,0 +1,34 @@
+.hero__standout{
+    position: relative;
+
+    .row{
+        margin :0;
+        padding-left: $padding-column;
+        padding-right: $padding-column;
+
+        @media #{$media-not-desktop} {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &--headline{
+        background: $white-color;
+        padding: $padding-elements $padding-column;
+        margin-top: -$padding-section;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+
+        @media #{$media-not-desktop} {
+            margin-top: -$padding-text;
+            padding: $padding-elements/2 $padding-column/2;
+        }
+    }
+
+    &--content{
+        padding: $padding-elements $padding-text 0 $padding-text;
+
+        @media #{$media-not-desktop} {
+            padding: $padding-elements/2 $padding-text/2 0 $padding-text/2;
+        }
+    }
+}

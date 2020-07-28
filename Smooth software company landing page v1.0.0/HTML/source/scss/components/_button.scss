@@ -1,0 +1,342 @@
+/* Button */
+button{
+    &:hover, &:focus, &:active{
+        outline: 0;
+        box-shadow:none !important;
+    }
+}
+
+.btn{
+    padding: $padding-half $padding-column;
+    font-family: $font-montserrat-bold;
+    font-size:$font-h5;
+    line-height: $lineheight-auto;
+    border:1px solid transparent;
+    border-radius:2px;
+    @media #{$media-not-desktop} {
+        font-size:$font-body;
+        padding: $padding-half/2+5 $padding-column/2+5;
+    }
+
+    &:hover, &:focus, &:active{
+        outline: 0;
+        box-shadow:none !important;
+        text-decoration: none;
+    }
+
+    &-rounded{
+        border-radius:80px;
+    }
+
+    &-sm{
+        font-size:$font-body;
+        line-height:$font-body;
+        padding: $padding-print $padding-text;
+        @media #{$media-not-desktop} {
+            font-size:$font-print;
+            line-height:$font-print;
+            padding: $padding-print/2+5 $padding-text/2+5;
+        }
+    }
+
+    &-xs{
+        font-size:$font-print;
+        line-height:$font-print;
+        padding: $padding-print/2+3 $padding-text/2+10;
+        @media #{$media-not-desktop} {
+            font-size:$font-print;
+            line-height:$font-print;
+            padding: $padding-print/2+3 $padding-text/2+10;
+        }
+    }
+
+    &-lg{
+        font-size:$font-h3;
+        line-height: $lineheight-auto;
+        padding: $padding-text $padding-elements;
+        @media #{$media-not-desktop} {
+            font-size:$font-h4;
+            padding: $padding-text/2+5 $padding-elements/2+5;
+        }
+    }
+
+    &-icon-left{
+        .fa{
+            margin-right:5px;
+        }
+    }
+
+    &-icon-right{
+        .fa{
+            margin-left:5px;
+        }
+    }
+
+    &-default{
+        background:$text-color;
+        color:$white-color;
+        &:hover, &:focus, &:active{
+            background:$black-color;
+            color:$white-color;
+            text-decoration: none;
+        }
+    }
+
+    &-primary{
+        background:$blue-color;
+        border-color:$blue-color;
+        color:$white-color;
+        &:hover, &:focus, &:active{
+            background:$blue-dark-color;
+            border-color:$blue-dark-color;
+            color:$white-color;
+            text-decoration: none;
+        }
+    }
+
+    &-green{
+        background:$green-color;
+        border-color:$green-color;
+        color:$white-color;
+        &:hover, &:focus, &:active{
+            background:$green-dark-color;
+            border-color:$green-dark-color;
+            color:$white-color;
+            text-decoration: none;
+        }
+    }
+
+    &-purple{
+        background:$purple-color;
+        border-color:$purple-color;
+        color:$white-color;
+        &:hover, &:focus, &:active{
+            background:$purple-dark-color;
+            border-color:$purple-dark-color;
+            color:$white-color;
+            text-decoration: none;
+        }
+    }
+
+    &-red{
+        background:$red-color;
+        border-color:$red-color;
+        color:$white-color;
+        &:hover, &:focus, &:active{
+            background:$red-dark-color;
+            border-color:$red-dark-color;
+            color:$white-color;
+            text-decoration: none;
+        }
+    }
+
+    &-yellow{
+        background:$yellow-color;
+        border-color:$yellow-color;
+        color:$white-color;
+        &:hover, &:focus, &:active{
+            background:$yellow-dark-color;
+            border-color:$yellow-dark-color;
+            color:$white-color;
+            text-decoration: none;
+        }
+    }
+
+    &-orange{
+        background:$orange-color;
+        border-color:$orange-color;
+        color:$white-color;
+        &:hover, &:focus, &:active{
+            background:$orange-dark-color;
+            border-color:$orange-dark-color;
+            color:$white-color;
+            text-decoration: none;
+        }
+    }
+
+    &-white{
+        background:$white-color;
+        border-color:$white-color;
+        color:$text-color;
+        &:hover, &:focus, &:active{
+            background:$gray-bg;
+            border-color:$gray-bg;
+            color:$text-color;
+            text-decoration: none;
+        }
+    }
+
+    &-stroke{
+        background:none;
+
+        &.btn-default{
+            border-color:$text-color;
+            color:$text-color;
+            &:hover, &:focus, &:active{
+                background:$text-color;
+                color:$white-color;
+                text-decoration: none;
+            }
+        }
+
+        &.btn-primary{
+            border-color:$blue-color;
+            color:$blue-color;
+            &:hover, &:focus, &:active{
+                background:$blue-color;
+                color:$white-color;
+                text-decoration: none;
+            }
+        }
+
+        &.btn-green{
+            border-color:$green-color;
+            color:$green-color;
+            &:hover, &:focus, &:active{
+                background:$green-color;
+                color:$white-color;
+                text-decoration: none;
+            }
+        }
+
+        &.btn-purple{
+            border-color:$purple-color;
+            color:$purple-color;
+            &:hover, &:focus, &:active{
+                background:$purple-color;
+                color:$white-color;
+                text-decoration: none;
+            }
+        }
+
+        &.btn-red{
+            border-color:$red-color;
+            color:$red-color;
+            &:hover, &:focus, &:active{
+                background:$red-color;
+                color:$white-color;
+                text-decoration: none;
+            }
+        }
+
+        &.btn-yellow{
+            border-color:$yellow-color;
+            color:$yellow-color;
+            &:hover, &:focus, &:active{
+                background:$yellow-color;
+                color:$white-color;
+                text-decoration: none;
+            }
+        }
+
+        &.btn-orange{
+            border-color:$orange-color;
+            color:$orange-color;
+            &:hover, &:focus, &:active{
+                background:$orange-color;
+                color:$white-color;
+                text-decoration: none;
+            }
+        }
+
+        &.btn-white{
+            border-color:$white-color;
+            color:$white-color;
+            &:hover, &:focus, &:active{
+                background:$white-color;
+                color:$white-color;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-link{
+        position: relative;
+        font-family: $font-montserrat-bold;
+        color:$text-color;
+        padding-right:$padding-text;
+        transition: all 0.3s ease-in-out;
+
+        &:hover, &:active, &:focus{
+            color:$blue-dark-color;
+        }
+
+        &:hover{
+            &::after{
+                right: -5px;
+            }
+        }
+
+        &::after{
+            position: absolute;
+            font-family: $font-awesome;
+            content: "\f178";
+            transition: all 0.3s ease-in-out;
+            right:0;
+            top: -1.5px;
+        }
+
+        &.btn-primary{
+            background:none;
+            color:$blue-color;
+        }
+    }
+
+    &__play{
+        display: inline-block;
+        width:80px;
+        height:80px;
+        border:1px solid transparent;
+        border-radius: 50%;
+        background: $blue-color;
+        color: $white-color;
+        text-align: center;
+        font-size: $font-h3;
+        line-height: $font-h3;
+        overflow: hidden;
+        padding-top: $padding-text + 5;
+
+        @media #{$media-not-desktop} {
+            font-size: $font-h4;
+            line-height: $font-h4;
+            width:60px;
+            height:60px;
+            padding-top: $padding-text;
+        }
+
+        &:hover, &:focus, &:active{
+            background: $blue-dark-color;
+            color: $white-color;
+        }
+
+
+        &-stroke{
+            background: none;
+            color: $blue-color;
+            border:1px solid $blue-color;
+
+            &:hover, &:focus, &:active{
+                background: $blue-dark-color;
+                color: $white-color;
+                border:1px solid $blue-dark-color;
+            }
+        }
+
+        &-white{
+            background: $white-color;
+            color: $blue-color;
+
+            &.btn__play-stroke{
+                background: none;
+                color: $white-color;
+                border:1px solid $white-color;  
+
+                &:hover, &:focus, &:active{
+                    background: $white-color;
+                    color: $blue-color;
+                    border:1px solid $white-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,208 @@
+/* Owl Carousel */
+.owl-active-nav{
+    padding:0 $padding-component;
+    @media #{$media-not-desktop} {
+        padding:0 $padding-elements
+    }
+}
+
+.owl-nav{
+    position: absolute;
+    width:100%;
+    top:50%;
+    left:0;
+    margin-top:-5px;
+    z-index:99999;
+
+    .owl-prev,
+    .owl-next{
+        position: absolute;
+        display:block;
+        width:$padding-column;
+        height:$padding-print;
+        left:-$padding-component;
+
+        @media #{$media-not-desktop} {
+            left:-$padding-elements;
+            width:$padding-column - 5;
+        }
+
+        &:before{
+            position: absolute;
+            content: "\f177";
+            font-family: $font-awesome;
+            font-size:$font-h2;
+            line-height:$font-h2;
+            top:-10px;
+            left: -1px;
+            color:$gray-color;
+            transition: all 0.3s ease-in-out !important;
+
+            @media #{$media-not-desktop} {
+                font-size:$font-h3;
+                line-height:$font-h3;
+                top:-8px;
+            }
+
+        }
+        span{
+            display:none;
+        }
+
+        &:hover{
+            &:before{
+                color:$blue-color;
+            }
+        }
+    }
+
+    .owl-next{
+        left:auto;
+        right:-$padding-component;
+        @media #{$media-not-desktop} {
+            right:-$padding-elements;
+        }
+
+        &:before{
+            content: "\f178";
+        }
+    }
+}
+
+.owl-dots{
+    position: relative;
+    text-align: center;
+    padding:0;
+    margin-top: $padding-text;
+
+    .owl-dot{
+        position: relative;
+        display: inline-block;
+        width:12px;
+        height:12px;
+        border:1px solid #bfcae2 !important;
+        border-radius:50%;
+        padding:0 !important;
+        margin:0 2px !important;
+
+        span{
+            position: absolute;
+            display: inline-block;
+            background: #bfcae2 !important;
+            border-radius:50%;
+            width: 6px;
+            height: 6px;
+            top: 2px;
+            left: 2px;
+        }
+
+        &:hover{
+            border:1px solid $blue-color !important;
+            span{
+                background: $blue-color !important;
+            }
+        }
+
+        &.active{
+            width:16px;
+            height:16px;
+            border:1px solid $blue-color !important;
+            top:2px !important;
+
+            span{
+                background: $blue-color !important;
+                width: 8px;
+                height: 8px;
+                top: 3px;
+                left: 3px;
+            }
+        }
+    }
+}
+
+.section__purple{
+    .owl-nav{
+        .owl-prev:hover,
+        .owl-next:hover{
+            &:before{
+                color:$orange-color;
+            }
+        }
+    }
+}
+
+.owl-active-nav{
+    position: relative;
+    &--left{
+        .owl-nav{
+            position: absolute;
+            width: 110px;
+            display: block;
+            top:-55px;
+            left: auto;
+            right: $padding-section;
+            background: red;
+            @media #{$media-medium-desktop} {
+                right: $padding-section/2;
+            }
+
+            @media #{$media-not-desktop} {
+                right:15px;
+                width: 85px;
+            }
+
+            .owl-prev,
+            .owl-next{
+                position: absolute;
+                display:block;
+                width:50px;
+                height:32px;
+                left:0;
+        
+                @media #{$media-not-desktop} {
+                    width:40px;
+                    height:20px;
+                }
+
+                &:before{
+                    position: absolute;
+                    content: "\f177";
+                    font-family: $font-awesome;
+                    font-size:$font-h2;
+                    line-height:$font-h2;
+                    top:0;
+                    left:0;
+                    color:$gray-color;
+                    transition: all 0.3s ease-in-out !important;
+                    border: 1px solid $gray-color;
+                    padding: 0 $padding-print;
+        
+                    @media #{$media-not-desktop} {
+                        font-size:$font-h4;
+                        line-height:$font-h4;
+                    }
+        
+                }
+                span{
+                    display:none;
+                }
+        
+                &:hover{
+                    &:before{
+                        color:$blue-color;
+                        border: 1px solid $blue-color;
+                    }
+                }
+            }
+        
+            .owl-next{
+                left:auto;
+                right:0;
+
+                &:before{
+                    content: "\f178";
+                }
+            }
+        }
+    }
+}   

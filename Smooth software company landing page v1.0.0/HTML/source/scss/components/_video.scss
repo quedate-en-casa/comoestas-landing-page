@@ -1,0 +1,58 @@
+/* Video */
+.plyr__control--overlaid{
+    background: $orange-color;
+    padding:$padding-column;
+    box-shadow: 0px 5px 28px -5px rgba(190, 151, 151, 0.5);
+    
+    @media #{$media-not-desktop} {
+        padding:$padding-column/2;
+    }
+
+    &:hover, &:focus{
+        background: $orange-dark-color;
+        border:none;
+        outline: 0;
+    }
+}
+
+.plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded=true], .plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true]{
+    background: $orange-dark-color;
+    box-shadow: none;
+    outline: 0;
+}
+
+.plyr--video .plyr__controls{
+    background:none;
+}
+
+.plyr--stopped .plyr__controls{
+    opacity: 0;
+}
+
+.plyr--video{
+    background: none !important;
+}
+.plyr__video-wrapper{
+    background: none !important;  
+}
+.plyr__poster{
+    background-color: transparent !important;
+    background-position: top center;
+    background-size: cover;
+}
+.video{
+    &__background{
+        position: relative;
+        display: block;
+
+        &-wrapper{
+            position: absolute;
+            top:5%;
+            margin-top: 17px;
+        }
+
+        &-image{
+            width: 100%;
+        }
+    }
+}

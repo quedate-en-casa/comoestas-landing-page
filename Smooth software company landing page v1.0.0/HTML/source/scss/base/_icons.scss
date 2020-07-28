@@ -1,0 +1,82 @@
+/* Icons */
+.icon{
+    background:transparent;
+    display:inline-block;
+    width: 60px;
+    height:60px;
+    background-size:60px auto;
+    margin-bottom:$padding-print;
+    @media #{$media-not-desktop} {
+        margin-bottom:$padding-print/2;
+        background-size:30px auto;
+        width: 30px;
+        height:30px;
+    }
+
+    &-lg{
+        width: 120px;
+        height:120px;
+        background-size:120px auto;  
+        @media #{$media-not-desktop} {
+            margin-bottom:$padding-print/2;
+            background-size:60px auto;  
+            width: 60px;
+            height:60px;
+        } 
+    }
+    &-book{
+        background-image:url('../../assets/icons/svg/book.svg');
+    }
+
+    &-chart{
+        background-image:url('../../assets/icons/svg/chart.svg');
+    }
+
+    &-cogs{
+        background-image:url('../../assets/icons/svg/cogs.svg');
+    }
+
+    &-device{
+        background-image:url('../../assets/icons/svg/device.svg');
+    }
+
+    &-download{
+        background-image:url('../../assets/icons/svg/download.svg');
+    }
+
+    &-flask{
+        background-image:url('../../assets/icons/svg/flask.svg');
+    }
+
+    &-hard-disk{
+        background-image:url('../../assets/icons/svg/hard-disk.svg');  
+    }
+    
+    &-help{
+        background-image:url('../../assets/icons/svg/help.svg');  
+    }
+
+    &-gift{
+        background-image:url('../../assets/icons/svg/gift.svg');  
+    }
+
+    &-users{
+        background-image:url('../../assets/icons/svg/users.svg');  
+    }
+
+    &-paper-plane{
+        background-image:url('../../assets/icons/svg/paper-plane.svg');  
+    }
+
+    &-tree{
+        background-image:url('../../assets/icons/svg/tree.svg');  
+    }
+
+    &-question{
+        background-image:url('../../assets/icons/svg/question.svg');  
+    }
+
+    &-wallet{
+        background-image:url('../../assets/icons/svg/wallet.svg');  
+    }
+}

@@ -1,0 +1,113 @@
+.team{
+    &__card{
+        box-shadow: -1px 4px 10px rgba(0, 0, 0, 0.05);
+        margin-bottom: $padding-elements;
+
+        @media #{$media-screen-tablet} {
+            margin-bottom: $padding-column;
+        }
+
+        @media #{$media-screen-mobile} {
+            margin-bottom: $padding-elements/2;
+        }
+
+        &:hover{
+            img{
+                transform: scale(1.08);
+            }
+        }
+
+        &--join{
+            display: table;
+            width: 100%;
+            border: 1px solid $gray-color;
+            text-align: center;
+            box-shadow: -1px 4px 10px rgba(0, 0, 0, 0.05);
+
+            &-link{
+                display: table-cell;
+                vertical-align: middle;
+                text-decoration: underline;
+                @extend %h3;
+
+                @media #{$media-not-desktop} {
+                    display: block;
+                    margin: 0;
+                    padding: $padding-print $padding-text;
+                }
+            }
+
+            @media #{$media-not-desktop} {
+                border: 1px solid $blue-color;
+            }
+        }
+    }
+
+    &__thumbnail{
+        overflow: hidden;
+
+        img{
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &__content{
+        background: $white-color;
+        border: 1px solid $gray-color;
+        border-top: none;
+        padding: $padding-text $padding-column;
+
+        @media #{$media-not-desktop} {
+            padding: $padding-text/2 $padding-column/2;
+        }
+
+        &--heading{
+            margin-bottom: $padding-text;
+
+            @media #{$media-not-desktop} {
+                margin-bottom: $padding-text/2;
+            }
+        }
+    }
+
+    &__name{
+        margin-bottom: 0;
+    }
+
+    &__network{
+        display: block;
+        margin: 0 0  $padding-text 0;
+        padding: 0;
+
+        @media #{$media-not-desktop} {
+            margin: 0 0  $padding-text/2 0;
+        }
+
+        li{
+            display: inline;
+            list-style: none;
+            margin: 0 $padding-print 0 0;
+            padding: 0;
+
+            @media #{$media-not-desktop} {
+                margin: 0 $padding-print/2 0 0;
+            }
+        }
+
+        &--link{
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            background: $gray-color;
+            color: $text-color;
+            line-height: 32px;
+
+            &:hover{
+                background: $blue-color;
+                color: $white-color;
+            }
+        }
+    }
+}

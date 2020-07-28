@@ -6734,6 +6734,10 @@ PARTIALS - Header,  Masthead, Footer, etc
     color: #b7c3de;
 }
 
+.section__cta-subscribe-input::-moz-placeholder {
+    color: #b7c3de;
+}
+
 .section__cta-subscribe-input::-ms-input-placeholder {
     color: #b7c3de;
 }
