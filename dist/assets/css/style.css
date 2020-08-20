@@ -5808,7 +5808,7 @@ PARTIALS - Header,  Masthead, Footer, etc
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 100% auto;
-    padding-bottom: 280px;
+    padding-bottom: 0px;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
@@ -6070,7 +6070,7 @@ PARTIALS - Header,  Masthead, Footer, etc
     display: block;
     content: '';
     width: 720px;
-    height: 186px;
+    height: 0px;
     margin: 0 auto;
     background-repeat: no-repeat;
     background-position: bottom left;
@@ -6120,7 +6120,7 @@ PARTIALS - Header,  Masthead, Footer, etc
 }
 
 .section__gray-watter--top {
-    padding: 380px 0 80px 0;
+    padding: 0px 0 80px 0;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
@@ -6141,7 +6141,7 @@ PARTIALS - Header,  Masthead, Footer, etc
 }
 
 .section__gray-watter--bottom {
-    padding: 80px 0 380px 0;
+    padding: 80px 0 0px 0;
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100% auto;
@@ -6289,6 +6289,7 @@ PARTIALS - Header,  Masthead, Footer, etc
     position: relative;
     display: block;
     padding: 100px 0 0 0;
+    margin-top: 70px;
 }
 
 @media (max-width: 991px) {
